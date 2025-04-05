@@ -1,0 +1,19 @@
+.header {
+    color: var(--brown);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*Resize Screen Layout*/
+@media screen and (max-width:1200px) {
+    .header {
+        display: flex;
+        flex-direction: column;  
+        align-items: start;
+    }
+
+    .header-img {
+        max-width: 100%;
+    }
+}
