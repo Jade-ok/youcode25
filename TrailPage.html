@@ -1,17 +1,168 @@
-<html>
-    <head>
-        <title>Trail A</title>
-        <link rel="stylesheet" href="TrailStyle.css">
-    </head>
-    <body>
-        <!--Header-->
-        <div class="header">
-            <img class="header-img" src="/Users/sabrinachan/UBC Year 1/youcode25/pics/FallsLake.jpg">
-            <div>
-               <h1>Falls Lake</h1> 
-               <h2>Fraser Valley East</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forest Spirit Trail</title>
+    <link rel="stylesheet" href="TrailStyle.css" />
+</head>
+
+<body>
+    <div>
+        <p style="background-image: url('pics/TrailHeader.png');"></p>
+        <header>
+            <h1>Forest Spirit Trail</h1>
+        </header>
+    </div>
+
+    <section class="intro-section">
+        <div class="trail-image">
+            <img src="pics/FallsLake.jpg" alt="Forest Spirit Trail">
+        </div>
+
+        <div class="indigenous-info">
+            <h2>Indigenous Insight</h2>
+            <p>
+                This trail holds deep cultural significance to the local Indigenous community, who have used it for
+                generations as a path for seasonal migration and spiritual connection to the land. Traditional knowledge
+                highlights the importance of respecting flora and fauna along the way.
+            </p>
+        </div>
+    </section>
+
+    <section class="comments-section">
+        <h3>What Others Have Thought About This Trail</h3>
+
+        <div class="comment">
+            <img src="pics/avataaars copy.png" alt="User profile">
+            <div class="comment-content">
+                <strong>Alex</strong><br>
+                Loved hiking this trail in early autumn! The colors were amazing and I learned a lot from the Indigenous
+                guide.
+            </div>
+        </div>
+
+        <div class="comment">
+            <img src="pics/avataaars.png" alt="User profile">
+            <div class="comment-content">
+                <strong>Sara</strong><br>
+                Such a peaceful trail. Please remember to pack out your garbage and stay on the path 🙏
+            </div>
+        </div>
+
+        <div class="add-comment">
+            <h4>Share Your Experience and Findings From Your Hike!</h4>
+            <form action="#" method="POST">
+                <textarea name="comment" rows="4" placeholder="Write your comment here..." required></textarea><br>
+                <button type="submit">Submit Comment</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="indigenous-blog-section">
+        <h2>Indigenous Posts and Events</h2>
+        <p>Read updates, stories, and upcoming events shared by Indigenous guides and members of the community.</p>
+
+        <!-- Blog Post 1 -->
+        <div class="blog-post">
+            <div class="blog-header">
+                <h3>Indigenous Guide Tour: Autumn Foliage Hike</h3>
+                <span>Posted by <strong>John Doe</strong> | <strong>5 days ago</strong></span>
+            </div>
+            <p>
+                Join us for a special tour through the Forest Spirit Trail as we explore the stunning autumn colors and
+                discuss the cultural significance of the changing seasons. The tour will focus on plant life and its
+                connection to the local Indigenous community.
+            </p>
+
+            <!-- Like Button -->
+            <button class="like-button">👍 Like</button>
+            <span class="like-count">0 Likes</span>
+
+            <!-- Comment Section -->
+            <div class="blog-comments">
+                <h4>Comments:</h4>
+                <div class="comment">
+                    <img src="pics/avataaars.png" alt="User profile">
+                    <div class="comment-content">
+                        <strong>Sara</strong><br>
+                        Sounds amazing! Can't wait to join the tour.
+                    </div>
+                </div>
+                <div class="comment">
+                    <img src="pics/avataaars copy.png" alt="User profile">
+                    <div class="comment-content">
+                        <strong>Alex</strong><br>
+                        Looking forward to learning more about the trail's significance.
+                    </div>
+                </div>
             </div>
 
+            <!-- Comment Form -->
+            <div class="add-comment">
+                <form action="#" method="POST">
+                    <textarea name="comment" rows="2" placeholder="Leave a comment..." required></textarea><br>
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </div>
         </div>
-    </body>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-post">
+            <div class="blog-header">
+                <h3>Sacred Rituals of the Trail</h3>
+                <span>Posted by <strong>Emily White</strong> | <strong>2 weeks ago</strong></span>
+            </div>
+            <p>
+                This post delves into the sacred rituals that have been carried out by our ancestors along this trail. The
+                trail has been a sacred space for spiritual practices, and we invite you to learn more about its cultural
+                importance through a guided discussion.
+            </p>
+
+            <!-- Like Button -->
+            <button class="like-button">👍 Like</button>
+            <span class="like-count">0 Likes</span>
+
+            <!-- Comment Section -->
+            <div class="blog-comments">
+                <h4>Comments:</h4>
+                <div class="comment">
+                    <img src="pics/avataaars copy.png" alt="User profile">
+                    <div class="comment-content">
+                        <strong>John</strong><br>
+                        What an eye-opening post! I'd love to attend the discussion.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="add-comment">
+                <form action="#" method="POST">
+                    <textarea name="comment" rows="2" placeholder="Leave a comment..." required></textarea><br>
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </div>
+        </div>
+
+        <section class="tour-guide-signup-section">
+            <h2>Sign Up to Join the Guided Hike By Our Indigenous</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam facilis cupiditate accusamus hic quasi accusantium sit delectus voluptatem ipsa architecto pariatur perferendis quas, numquam nostrum deserunt dolore cumque nihil maxime.</p>
+            
+            <form action="#" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required><br>
+    
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required><br>
+    
+                <label for="availability">Availability</label>
+                <input type="text" id="availability" name="availability" placeholder="When are you available for tours?" required><br>
+    
+                <button type="submit">Join the Hike!</button>
+            </form>
+        </section>
+    </section>
+</body>
+
 </html>
