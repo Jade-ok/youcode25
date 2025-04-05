@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .title {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  
+  .dots {
+    margin: 10px 0 20px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #f3b6b6;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.4;
+  }
+  
+  .dot.active {
+    opacity: 1;
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow {
+    font-size: 24px;
+    background: #eee;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    height: 260px;
+  }
+  
+  .gallery {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+  }
+  
+  .gallery a {
+    text-decoration: none;
+    color: black;
+    width: 220px;
+    flex-shrink: 0;
+  }
+  
+  .gallery img {
+    width: 220px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery p {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
