@@ -12,7 +12,9 @@
     <div>
         <p style="background-image: url('/pics/FallsLakeHeader.jpg');"></p>
         <header>
-            <h1>Forest Spirit Trail</h1>
+            <a href="index.html" style="text-decoration: none;">
+                <h1 style="color: white;"> Forest Spirit Trail </h1>
+              </a>   
         </header>
     </div>
 
@@ -181,12 +183,10 @@
     <script>
         const board = document.getElementById("comment-board");
       
-        // 댓글을 불러오기
         const saved = localStorage.getItem("comments");
         const comments = saved ? JSON.parse(saved) : [];
         comments.forEach(renderComment);
       
-        // 댓글 제출
         function submitComment() {
           const name = document.getElementById("name-input").value;
           const comment = document.getElementById("comment-input").value;
@@ -201,7 +201,6 @@
           document.getElementById("comment-input").value = "";
         }
       
-        // 댓글 렌더링
         function renderComment(c) {
           const div = document.createElement("div");
           div.className = "comment";
@@ -214,6 +213,15 @@
           `;
           board.appendChild(div);
         }
+
+        document.querySelectorAll(".like-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const countSpan = button.nextElementSibling;
+        let current = parseInt(countSpan.textContent) || 0;
+        current++;
+        countSpan.textContent = `${current} Likes`;
+      });
+    });
       </script>
       
       
