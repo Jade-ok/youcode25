@@ -40,43 +40,70 @@ body {
     letter-spacing: 1px;
   }
   
-  .gallery {
+  .gallery-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align gallery to the left */
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
-  }
-  
-  .gallery a {
+}
+
+.gallery a {
     text-decoration: none;
     color: black;
     width: 220px;
-  }
-  
-  .gallery img {
+}
+
+.gallery img {
     width: 220px;
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: transform 0.3s;
-  }
-  
-  .gallery img:hover {
+}
+
+.gallery img:hover {
     transform: scale(1.05);
-  }
-  
-  .gallery p {
+}
+
+.gallery p {
     font-weight: bold;
     margin-top: 10px;
     font-size: 16px;
-  }
+}
+
+/* Indigenous Page Button Section */
+.indigenous-section {
+    margin-left: 30px;
+    align-self: center;  /* Align the button vertically in the center */
+}
+
+.indigenous-button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.indigenous-button:hover {
+    background-color: #1f5b24;
+}
+
 
   #map {
     width: 100%;
     height: 500px;
-    margin: 30px 0;
+    margin: 30px 0 0 0;
   }
   
   
