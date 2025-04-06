@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vancouver Trails</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Leaflet MAP CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="main-top">
+    <div class="main-text">
+      <h1>Welcome to</h1>
+      <h2>Vancouver Trails</h2>
+    </div>
+  </div>
+
+  <h1 class="title">Explore Trails</h1>
+
+
+  <!-- trail photos -->
+  <div class="gallery">
+    <a href="trail1.html">
+      <img src="images/trail1.jpg" alt="Trail 1">
+      <p>PACIFIC SPIRIT TRAIL</p>
+    </a>
+    <a href="trail2.html">
+      <img src="images/trail2.jpg" alt="Trail 2">
+      <p>GROUSE GRIND</p>
+    </a>
+    <a href="trail3.html">
+      <img src="images/trail3.jpg" alt="Trail 3">
+      <p>STANLEY PARK LOOP</p>
+    </a>
+    <a href="trail4.html">
+      <img src="images/trail4.jpg" alt="Trail 4">
+      <p>LYNN CANYON</p>
+    </a>
+  </div>
+
+
+  <!-- MAP -->
+  <div id="map"></div>
+
+  <!-- Leaflet map JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([49.3, -123.1], 8);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const customIcon = L.icon({
+      iconUrl: 'images/trail-icon.png', 
+      iconSize: [40, 40],
+      iconAnchor: [20, 40],
+      popupAnchor: [0, -35]
+    });
+
+    const trails = [
+      { name: "Pacific Spirit", coords: [49.2606, -123.2441], url: "trail1.html" },
+      { name: "Grouse Grind", coords: [49.3700, -123.1016], url: "trail2.html" },
+      { name: "Stanley Park Loop", coords: [49.3043, -123.1443], url: "trail3.html" },
+      { name: "Lynn Canyon", coords: [49.3434, -123.0203], url: "trail4.html" }
+    ];
+
+    trails.forEach(trail => {
+      L.marker(trail.coords, { icon: customIcon }).addTo(map)
+        .bindPopup(`<b>${trail.name}</b><br><a href="${trail.url}">View Trail</a>`);
+    });
+  </script>
+</body>
+</html>
