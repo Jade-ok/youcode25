@@ -9,10 +9,30 @@
 </head>
 
 <body>
+    <a href="index.html" style="
+  all: unset;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 9999;
+">
+  ← Main
+</a>
+
     <div>
         <p style="background-image: url('/pics/FallsLakeHeader.jpg');"></p>
         <header>
-            <h1>Forest Spirit Trail</h1>
+            <a href="index.html" style="text-decoration: none;">
+                <h1 style="color: white;"> Forest Spirit Trail </h1>
+              </a>   
         </header>
     </div>
 
@@ -63,7 +83,6 @@
     <section class="comments-section">
         <h3>What Others Have Thought About This Trail</h3>
       
-        <!-- 코멘트 작성 폼 -->
         <div class="add-comment">
           <h4>Share Your Experience and Findings From Your Hike!</h4>
           <form onsubmit="submitComment(); return false;">
@@ -73,7 +92,6 @@
           </form>
         </div>
       
-        <!-- 코멘트가 표시될 위치 -->
         <div id="comment-board"></div>
       </section>
       
@@ -82,7 +100,6 @@
         <h2>Indigenous Posts and Events</h2>
         <p>Read updates, stories, and upcoming events shared by Indigenous guides and members of the community.</p>
 
-        <!-- Blog Post 1 -->
         <div class="blog-post">
             <div class="blog-header">
                 <h3>Indigenous Guide Tour: Autumn Foliage Hike</h3>
@@ -184,33 +201,24 @@
     <script>
         const board = document.getElementById("comment-board");
       
-        // 기존 댓글 불러오기
-        fetch('/api/comments')
-          .then(res => res.json())
-          .then(data => {
-            data.forEach(renderComment);
-          });
+        const saved = localStorage.getItem("comments");
+        const comments = saved ? JSON.parse(saved) : [];
+        comments.forEach(renderComment);
       
-        // 제출 함수
         function submitComment() {
           const name = document.getElementById("name-input").value;
           const comment = document.getElementById("comment-input").value;
           if (!name || !comment) return;
       
           const newComment = { name, comment };
+          comments.push(newComment);
+          localStorage.setItem("comments", JSON.stringify(comments));
+          renderComment(newComment);
       
-          fetch('/api/comments', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newComment)
-          }).then(() => {
-            renderComment(newComment);
-            document.getElementById("name-input").value = "";
-            document.getElementById("comment-input").value = "";
-          });
+          document.getElementById("name-input").value = "";
+          document.getElementById("comment-input").value = "";
         }
       
-        // 코멘트 렌더링
         function renderComment(c) {
           const div = document.createElement("div");
           div.className = "comment";
@@ -223,7 +231,17 @@
           `;
           board.appendChild(div);
         }
+
+        document.querySelectorAll(".like-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const countSpan = button.nextElementSibling;
+        let current = parseInt(countSpan.textContent) || 0;
+        current++;
+        countSpan.textContent = `${current} Likes`;
+      });
+    });
       </script>
+      
       
 
 </body>
