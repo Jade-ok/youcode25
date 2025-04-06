@@ -7,6 +7,7 @@
 
   <!-- Leaflet MAP CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
 </head>
 <body>
   <div class="main-top">
@@ -45,6 +46,7 @@
       <a href="template/uploadpage.html" class="indigenous-button">Upload</a>
     </div>
   </div>
+
   <!-- MAP -->
   <div id="map"></div>
 
@@ -75,6 +77,11 @@
       L.marker(trail.coords, { icon: customIcon }).addTo(map)
         .bindPopup(`<b>${trail.name}</b><br><a href="${trail.url}">View Trail</a>`);
     });
+
+    
   </script>
+
+
+
 </body>
 </html>

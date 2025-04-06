@@ -178,3 +178,43 @@ header p {
 .tour-promotion-section button:hover {
     background-color: #1f5b24;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .modal-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #3a7a3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

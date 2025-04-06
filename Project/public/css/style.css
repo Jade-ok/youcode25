@@ -106,4 +106,32 @@ body {
     margin: 30px 0 0 0;
   }
   
+  .event-log {
+    padding: 20px;
+    background-color: #f0f8ff;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .event-log h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  #eventList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #eventList li {
+    background: #ffffff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid #00704A;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: left;
+  }
   
