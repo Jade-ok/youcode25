@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indigenous Trail Platform</title>
+    <link rel="stylesheet" href="css/indigenousStyle.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Indigenous Trail Platform</h1>
+            <p>Welcome to the platform where Indigenous people can share their knowledge, become tour guides, and edit descriptions of the Forest Spirit Trail.</p>
+        </header>
+
+        <!-- Tour Guide Sign-Up Section -->
+        <section class="signup-section">
+            <h2>Sign Up as a Tour Guide</h2>
+            <p>If you have knowledge of the Forest Spirit Trail and want to share it, sign up as a tour guide!</p>
+            <form action="#" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required><br>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required><br>
+
+                <label for="availability">Availability (Dates and Times)</label>
+                <input type="text" id="availability" name="availability" placeholder="Provide information of when are you available for tours?" required><br>
+
+                <label for="experience">Why do you want to be a tour guide?</label><br>
+                <textarea id="experience" name="experience" rows="4" placeholder="Describe your experience with a particular trial you hope to guide" required></textarea><br>
+
+                <button type="submit">Sign Up as a Tour Guide</button>
+            </form>
+        </section>
+
+        <!-- Trail Description Editing Section -->
+        <section class="edit-description-section">
+            <h2>Edit Trail Description</h2>
+            <p>As a tour guide, you can contribute to the trail by editing descriptions of the trail to provide more detailed and culturally significant information.</p>
+            <form action="#" method="POST">
+                <label for="trail-description">Edit Trail Description</label><br>
+                <textarea id="trail-description" name="trail-description" rows="6" placeholder="Edit the description of the trail here..." required></textarea><br>
+
+                <button type="submit">Update Description</button>
+            </form>
+        </section>
+
+        <!-- Tour Promotion Section -->
+        <section class="tour-promotion-section">
+            <h2>Promote Your Tour</h2>
+            <p>Post details about your upcoming tours to attract visitors to experience the trail with you as their guide.</p>
+            <form action="#" method="POST">
+                <label for="tour-title">Tour Title</label>
+                <input type="text" id="tour-title" name="tour-title" placeholder="Enter the title of your tour" required><br>
+
+                <label for="tour-details">Tour Details</label><br>
+                <textarea id="tour-details" name="tour-details" rows="4" placeholder="Provide details about your tour (dates, duration, theme, etc.)" required></textarea><br>
+
+                <button type="submit">Publish Tour on Our Main Page</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>

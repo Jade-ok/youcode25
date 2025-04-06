@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head><title>Hiker Notes</title></head>
+<body>
+ <h1>Trail Notes</h1>
+ <form id="trailForm">
+   <input type="text" id="trailName" placeholder="Trail name" />
+   <textarea id="note" placeholder="Leave a note..."></textarea>
+   <button type="submit">Submit</button>
+ </form>
+ <ul id="trailList"></ul>
+
+
+ <script>
+   const form = document.getElementById('trailForm');
+   form.addEventListener('submit', async (e) => {
+     e.preventDefault();
+     const trailName = document.getElementById('trailName').value;
+     const note = document.getElementById('note').value;
+
+
+     await fetch('/add_trail', {
+       method: 'POST',
+       headers: { 'Content-Type': 'application/json' },
+       body: JSON.stringify({ trail: trailName, note: note })
+     });
+
+
+     loadTrails();
+   });
+
+
+   async function loadTrails() {
+     const res = await fetch('/get_trails');
+     const data = await res.json();
+     const list = document.getElementById('trailList');
+     list.innerHTML = '';
+     data.forEach(item => {
+       const li = document.createElement('li');
+       li.textContent = `${item.trail}: ${item.note}`;
+       list.appendChild(li);
+     });
+   }
+
+
+   loadTrails();
+ </script>
+</body>
+</html>

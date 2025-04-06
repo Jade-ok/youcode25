@@ -1,0 +1,180 @@
+/* General Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    background-image: url('/Project/public/pics/indigenouspagebg.jpg');
+}
+
+/* Container for all sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 40px;
+    background-color: #2e7d32;
+    color: white;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tour Guide Sign-Up Section Styling */
+.signup-section {
+    background-color: #eaf5e4;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.signup-section h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.signup-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-section label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.signup-section input,
+.signup-section textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.signup-section button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.signup-section button:hover {
+    background-color: #1f5b24;
+}
+
+/* Trail Description Editing Section Styling */
+.edit-description-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.edit-description-section h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.edit-description-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-description-section label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.edit-description-section textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.edit-description-section button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-description-section button:hover {
+    background-color: #1f5b24;
+}
+
+/* Tour Promotion Section Styling */
+.tour-promotion-section {
+    background-color: #eaf5e4;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-promotion-section h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.tour-promotion-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-promotion-section label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.tour-promotion-section input,
+.tour-promotion-section textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.tour-promotion-section button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.tour-promotion-section button:hover {
+    background-color: #1f5b24;
+}
